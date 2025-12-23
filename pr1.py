@@ -1,0 +1,12 @@
+fo=open("foo.txt","w")
+fo.write("line1\n")
+fo.write("line2\n")
+fo.close()
+fo=open("foo.txt","r")
+print(fo.read())
+print("current position: ",fo.tell())
+print("current position: ",int(fo.tell()))
+position = fo.seek(4, 0)#seek from  4th argument, and move 9 arguments back
+print("Reading again, after seek function!")
+print (fo.read())
+fo.close()
